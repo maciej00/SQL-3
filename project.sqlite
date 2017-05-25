@@ -1,0 +1,34 @@
+SELECT COUNT(*) FROM fake_apps;
+SELECT name, category, price, MIN(downloads) FROM fake_apps;
+SELECT name, COUNT(*) FROM fake_apps
+GROUP BY category;
+SELECT name, category, MAX(downloads) FROM fake_apps;
+SELECT name, category, MIN(downloads) FROM fake_apps;
+SELECT category, ROUND(AVG(price), 2) FROM fake_apps
+GROUP BY category;
+SELECT name, MAX(price) FROM fake_apps;
+SELECT name, MIN(downloads) FROM fake_apps;
+SELECT name, COUNT(*) FROM fake_apps
+WHERE category = 'Games';
+SELECT name, price, COUNT(*)FROM fake_apps
+WHERE price = 0;
+SELECT name, price FROM fake_apps
+WHERE price = 14.99;
+SELECT name, SUM(downloads) FROM fake_apps
+WHERE category = 'Music';
+SELECT name, SUM(downloads) FROM fake_apps
+WHERE category = 'Business';
+SELECT category, COUNT(*) FROM fake_apps
+GROUP BY category;
+SELECT price, ROUND(AVG(downloads), 2) FROM fake_apps
+GROUP BY price;
+SELECT price, ROUND(AVG(downloads), 0) FROM fake_apps
+GROUP BY price;
+SELECT name, category, MAX(price) FROM fake_apps
+GROUP BY category;
+SELECT COUNT(*) FROM fake_apps 
+WHERE name LIKE 'A%';
+SELECT category, SUM(downloads) FROM fake_apps
+WHERE category = 'Sports'
+OR category = 'Health & Fitness'
+GROUP BY category;
